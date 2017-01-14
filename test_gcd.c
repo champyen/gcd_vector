@@ -50,7 +50,7 @@ int main(void)
     printf("init done\n");
 
     dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,NULL);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     struct timeval s_time, e_time;
     gettimeofday(&s_time, NULL);
     for(int y = 0; y < H1; y+=8){
