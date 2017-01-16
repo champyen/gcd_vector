@@ -30,3 +30,5 @@ i7-3612QM: 23.4X
 - test_gcd 112845 us
 - test_gcd_tile 92521 us
 - test_gcd_vec 11808 us
+- gcc test_vec 51243 us
+- gcc test_gcd_vec 17173 us
