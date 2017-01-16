@@ -8,6 +8,9 @@ Raspberry Pi 3: 114X
 - test_gcd 6778646 us
 - test_gcd_tile 1085776 us
 - test_gcd_vec 164121 us
+- gcc add -mfpu=neon
+- gcc test_vec 392002 us
+- gcc test_gcd_vec 196767 us
 
 A8-5545m: 15X 
 - test 446682 us
