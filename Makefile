@@ -1,5 +1,12 @@
 CC=clang
-CFLAGS= -fblocks -O3
+ifndef CC_VEC
+CC_VEC=clang
+endif
+
+CFLAGS=-O3 --save-temps
+#CFLAGS_VEC=-O3 --save-temps
+CFLAGS_VEC:=$(CFLAGS)
+CFLAGS+=-fblocks
 
 # x86
 #CFLAGS += -mfma -mavx
@@ -26,6 +33,9 @@ test_tile: test.o tile.o
 
 test: test.o naive.o
 	$(CC) -o test test.o naive.o
+
+vec.o: vec.c
+	$(CC_VEC) $(CFLAGS_VEC) -c vec.c
 
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
