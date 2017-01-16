@@ -16,6 +16,9 @@ A8-5545m: 15X
 - test_gcd 239297 us
 - test_gcd_tile 2638397 us
 - test_gcd_vec 29957 us
+- gcc test_vec 84286 us
+- gcc test_gcd_vec 54648 us
+
 
 i7-3612QM: 23.4X
 - test 275879 us
